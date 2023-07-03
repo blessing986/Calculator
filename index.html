@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+  </head>
+  <body class="bg-slate-900 h-screen flex justify-center items-center">
+    <div class="bg-black w-auto h-auto">
+      <form action="#" class="pt-20">
+        <input type="text" id="calculatorDisplay" class="bg-black text-white text-end text-4xl focus:outline-none mr-6" placeholder="0"/>
+      </form>
+
+      <div class="px-4">
+
+        // Row 1
+
+        <div class="flex justify-between">
+          <button onclick="clearDisplay()"
+            class="bg-slate-500 text-black font-semibold rounded-full text-2xl w-20 h-20"
+          >
+            AC
+          </button>
+          <button
+            class="bg-slate-500 text-black rounded-full text-2xl w-20 h-20 font-bold"
+          >
+            +/-
+          </button>
+          <button onclick="addToDisplay('%')"
+            class="bg-slate-500 text-black rounded-full text-2xl w-20 h-20 font-bold"
+          >
+            %
+          </button>
+          <button onclick="addToDisplay('/')"
+            id="operator" class="bg-amber-500 text-white rounded-full text-2xl w-20 h-20 font-bold"
+          >
+            ÷
+          </button>
+        </div>
+
+        // Row 2
+
+        <div class="flex justify-between">
+          <button onclick="addToDisplay('7')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            7
+          </button>
+          <button onclick="addToDisplay('8')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            8
+          </button>
+          <button onclick="addToDisplay('9')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            9
+          </button>
+          <button onclick="addToDisplay('*')"
+          id="operator" class="bg-amber-500 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            x
+          </button>
+        </div>
+
+        // Row 3
+
+        <div class="flex justify-between">
+          <button onclick="addToDisplay('4')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            4
+          </button>
+          <button onclick="addToDisplay('5')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            5
+          </button>
+          <button onclick="addToDisplay('6')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            6
+          </button>
+          <button onclick="addToDisplay('-')"
+          id="operator" class="bg-amber-500 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            -
+          </button>
+        </div>
+
+        // Row 4
+
+        <div class="flex justify-between">
+          <button onclick="addToDisplay('1')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            1
+          </button>
+          <button onclick="addToDisplay('2')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            2
+          </button>
+          <button onclick="addToDisplay('3')"
+            class="keys bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            3
+          </button>
+          <button onclick="addToDisplay('+')"
+          id="operator" class="bg-amber-500 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            +
+          </button>
+        </div>
+        // Row 5
+        <div class="flex justify-between pb-4">
+          <button onclick="addToDisplay('0')"
+            class="keys bg-gray-700 w-44 text-white font-semibold rounded-full text-3xl text-start pl-6"
+          >
+            0
+          </button>
+          <button onclick="addToDisplay('.')"
+            class="bg-gray-700 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            .
+          </button>
+          <button onclick="calculate()"
+            class="bg-amber-500 px-7 w-20 h-20 text-white font-semibold rounded-full text-3xl"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- function clearDisplay(){
+      display.value = 0;
+    } -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
